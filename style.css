@@ -1,0 +1,60 @@
+body {
+  margin: 0;
+  height: 100vh;
+  background: radial-gradient(circle, #230033, #050005);
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Georgia, serif;
+}
+
+.slider {
+  position: relative;
+  width: 300px;
+  height: 420px;
+  transform-style: preserve-3d;
+  animation: rotate 25s linear infinite;
+}
+
+.card {
+  position: absolute;
+  width: 260px;
+  height: 360px;
+  border-radius: 15px;
+  overflow: hidden;
+  background: white;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+.card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card p {
+  position: absolute;
+  bottom: 20px;
+  left: 15px;
+  right: 15px;
+  color: white;
+  font-size: 25px;
+  text-shadow: 2px 2px 5px black;
+}
+
+.card:nth-child(1) { transform: rotateY(0deg) translateZ(450px); }
+.card:nth-child(2) { transform: rotateY(36deg) translateZ(450px); }
+.card:nth-child(3) { transform: rotateY(72deg) translateZ(450px); }
+.card:nth-child(4) { transform: rotateY(108deg) translateZ(450px); }
+.card:nth-child(5) { transform: rotateY(144deg) translateZ(450px); }
+.card:nth-child(6) { transform: rotateY(180deg) translateZ(450px); }
+.card:nth-child(7) { transform: rotateY(216deg) translateZ(450px); }
+.card:nth-child(8) { transform: rotateY(252deg) translateZ(450px); }
+.card:nth-child(9) { transform: rotateY(288deg) translateZ(450px); }
+.card:nth-child(10) { transform: rotateY(324deg) translateZ(450px); }
+
+@keyframes rotate {
+  from { transform: perspective(1000px) rotateY(0deg); }
+  to { transform: perspective(1000px) rotateY(360deg); }
+}
